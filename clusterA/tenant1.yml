@@ -1,8 +1,8 @@
-apiVersion: projectcalico.org/v3
+apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
 metadata:
-  name: tenant1-allow-a
-  namespace: tenant1
+  name: team1-allow-a
+  namespace: team1
 spec:
   selector: color == 'red'
   ingress:

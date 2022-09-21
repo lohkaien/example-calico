@@ -1,0 +1,11 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: tenant1-allow-egress-app-1
+  namespace: tenant1
+spec:
+  selector: app == 'app-1'
+  types:
+  - Egress
+  egress:
+  - action: Allow

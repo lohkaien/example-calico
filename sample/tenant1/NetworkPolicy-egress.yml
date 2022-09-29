@@ -1,11 +1,11 @@
-apiVersion: crd.projectcalico.org/v1
-kind: NetworkPolicy
-metadata:
-  name: tenant1-allow-egress-app-1
-  namespace: tenant1
-spec:
-  selector: app == 'app-1'
-  types:
-  - Egress
-  egress:
-  - action: Allow
+# apiVersion: crd.projectcalico.org/v1
+# kind: NetworkPolicy
+# metadata:
+#   name: tenant1-allow-egress-sample-app
+#   namespace: tenant1
+# spec:
+#   selector: app == 'sample-app'
+#   types:
+#   - Egress
+#   egress:
+#   - action: Allow

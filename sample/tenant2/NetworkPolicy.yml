@@ -1,11 +1,14 @@
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
-  name: tenant2-allow-egress-app-2
+  name: tenant1-default
   namespace: tenant2
 spec:
-  selector: app == 'app-2'
+  selector: all()
   types:
   - Egress
+  - Ingress
   egress:
+  - action: Allow
+  ingress:
   - action: Allow

@@ -1,0 +1,14 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: allow-egress-external
+  namespace: tenant1
+spec:
+  selector: app == 'nginx'
+  types:
+    - Egress
+  egress:
+    - action: Allow
+      destination:
+        nets:
+          - 1.2.3.0/32
